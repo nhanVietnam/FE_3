@@ -1,0 +1,148 @@
+.introduce{
+    padding-top: 40px;
+    padding-bottom: 60px;
+    background-image: url("/assets/images/introduce-bg.svg");
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 500px 100%;
+    &__wrapper{
+        display: flex;
+    }
+
+    &__left{
+        padding-left: 15px;
+        flex: 1;
+    }
+
+    &__right{
+        flex: 1;
+    }
+
+    &__header{
+        display: flex;
+        align-items: center;
+        padding-bottom: 16px;
+        border-bottom: 1px solid $line-gray;
+    }
+
+    &__logo{
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+            position: relative;
+        }
+    }
+
+    &__title{
+        padding-top: 5px;
+        &__above{
+            font-size: 2rem;
+            font-weight: 500;
+            color: $text-black;
+            margin-bottom: 3px;
+        }
+
+        &__below{
+            font-size: 3.2rem;
+            font-weight: 900;
+            color: $text-red;
+            text-transform: uppercase;
+        }
+    }
+
+    &__main{
+        margin-top: 30px;
+    }
+
+    &__text{
+        font-size: 1.7rem;
+        line-height: 1.7;
+        text-align: justify;
+        padding-right: 20px;
+    }
+
+    &__image{
+        width: 735px;
+        margin-top: 60px;
+        padding-left: 50px;
+        img{
+            max-width: 100%;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 20px 20px 0 0 $bg-red;
+        }
+    }
+}
+
+@media screen and (max-width: 1399px) {
+    .introduce{
+        &__image{
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .introduce{
+        &__left{
+            padding-left: 0;
+        }
+
+        &__text{
+            font-size: 1.6rem;
+            line-height: 1.6;
+        }
+
+        &__image{
+            padding-left: 10px;
+            height: 80%;
+
+            img{
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .introduce{
+        background-position: bottom;
+        background-size: 50% 144%;
+        &__wrapper{
+            flex-direction: column;
+        }
+
+        &__title{
+            &__below{
+                font-size: 2.7rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .introduce{
+        &__left{
+            width: 80%;
+        }
+        &__text{
+            padding-right: 0;
+        }
+        &__right{
+            width: 80%;
+        }
+        &__image{
+            padding-left: 0;
+        }
+        &__wrapper{
+            align-items: center;
+        }
+    }
+}

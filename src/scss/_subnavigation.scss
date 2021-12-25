@@ -1,0 +1,116 @@
+.second__navigation{
+    background-color: $bg-red;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    &__logo{
+        width: 60px;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__items{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        margin-bottom: 0;
+    }
+
+    &__item{
+        padding: 0 17px;
+        &:last-child{
+            padding-right: 0;
+        }
+    }
+
+    &__link{
+        color: white;
+        font-size: 1.8rem;
+        font-weight: 400;
+        position: relative;
+
+        &::before{
+            position: absolute;
+            display: none;
+            content: "";
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background-color: white;    
+            top: 50%;
+            left: -20px;
+            transform: translateY(-50%);
+            transition: 0.5s;
+        }
+
+        &:hover{
+            text-shadow: -0.5px 0 white, 0.5px 0 white;
+            color: white;
+            &::before{
+                display: block;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1399px) {
+    .second__navigation{
+        &__item{
+            padding: 0 10px;
+        }
+
+        &__link{
+            font-size: 1.6rem;
+            &::before{
+                left: -10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .second__navigation{
+        &__logo{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .second__navigation{
+        overflow: hidden;
+        &__left{
+            display: none;
+        }
+
+        &__right{
+            width: 100%;
+        }
+
+        &__link{
+            font-size: 1.5rem;
+            white-space: nowrap;
+            overflow-x:auto;
+        }
+
+        &__items{
+            width: 100%;
+        }
+
+        &__item{
+            &:last-child{
+                display: none;
+            }
+        }
+    }
+}

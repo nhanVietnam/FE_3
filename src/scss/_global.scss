@@ -1,0 +1,74 @@
+$bg-blue-dark : #0e3252;
+$text-red : #d51f37;
+$bg-red : #d51f37;
+$bg-title : #d52038;
+$bg-black : #393939;
+$text-black : #393939;
+$line-gray : #e7e7e7;
+
+@mixin header {
+    display: flex;
+    align-items: center;
+}
+
+@mixin logo {
+    width: 70px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@mixin title($color : $text-red){
+    font-size: 3.2rem;
+    font-weight: 900;
+    color: $color;
+    text-transform: uppercase;
+}
+
+@mixin flex-align($align: center){
+    display: flex;
+    align-items: $align;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: Montserrat,sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: #333;
+    transition: 0.5s;
+
+    &:hover{
+        color: $text-red;
+    }
+}  
+
+.container{
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+@media screen and (min-width: 1620px) {
+    .container{
+        max-width: 1620px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .container{
+        padding: 0 20px;
+    }
+}
