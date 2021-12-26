@@ -6,7 +6,7 @@
         position: 0 300px;
     }
     padding-top: 40px;
-
+    overflow: hidden;
     &__header{
         @include header;
         margin-bottom: 30px;

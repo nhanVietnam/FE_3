@@ -63,6 +63,18 @@
     }
 }
 
+.top.second__navigation{
+    width: 100%;
+    padding-top: 0;
+    padding-bottom: 0;
+    top: 70px;
+    position: fixed;
+    z-index: 999;
+    .second__navigation__logo{
+        display: none;
+    }
+}
+
 @media screen and (max-width: 1399px) {
     .second__navigation{
         &__item{

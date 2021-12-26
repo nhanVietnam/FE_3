@@ -6,6 +6,7 @@
         position: center;
     }
     padding: 40px 0;
+    overflow: hidden;
     &__header{
         @include header;
         margin-bottom: 30px;
@@ -57,6 +58,7 @@
         grid-template-columns: repeat(4, 1fr);
         grid-gap: 10px;
         padding: 0 15px;
+        overflow: hidden;
     }
 
     &__item{

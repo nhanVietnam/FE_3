@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
+    "@types/aos": "^3.0.4",
     "@webpack-cli/generators": "^2.4.1",
     "autoprefixer": "^10.4.0",
     "css-loader": "^6.5.1",
@@ -30,6 +31,7 @@
   "license": "ISC",
   "description": "My webpack project",
   "dependencies": {
+    "aos": "^3.0.0-beta.6",
     "bootstrap": "^5.1.3",
     "express": "^4.17.2"
   }
