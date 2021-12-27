@@ -3,11 +3,13 @@ console.log("Hello World!");
 import "./index.scss";
 import AOS from "aos";
 import 'aos/dist/aos.css'; 
-// ..
-AOS.init();
 
-// You can also pass an optional settings object
-// below listed default settings
+import Swiper, { Navigation, Pagination } from 'swiper';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+Swiper.use([Navigation, Pagination]);
+
 AOS.init({
   // Global settings:
   disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -23,7 +25,7 @@ AOS.init({
   // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
   offset: 100, // offset (in px) from the original trigger point
   delay: 0, // values from 0 to 3000, with step 50ms
-  duration: 1000, // values from 0 to 3000, with step 50ms
+  duration: 500, // values from 0 to 3000, with step 50ms
   easing: 'ease', // default easing for AOS animations
   once: false, // whether animation should happen only once - while scrolling down
   mirror: true, // whether elements should animate out while scrolling past them
@@ -58,3 +60,40 @@ window.addEventListener("scroll", function() {
 // window.addEventListener("scroll", function() {
 //   stickySecondMenu(document.getElementById("second-navigation"))
 // });
+
+const navbar_mobile = document.getElementById("navigation-mobile");
+let navigation = document.querySelector(".topbar__mobile__navigation");
+navbar_mobile.addEventListener("click",function(){
+  navigation.classList.toggle("sticky__bar");
+})
+
+let navbar_mobile_close = document.getElementById("btn-close");
+navbar_mobile_close.addEventListener("click",function(){
+  navigation.classList.toggle("sticky__bar");
+})
+
+ 
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'horizontal',
+  loop: true,
+
+  // If we need pagination
+  pagination: {
+    el: '.swiper-pagination',
+  },
+
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+
+  // And if we need scrollbar
+  scrollbar: {
+    el: '.swiper-scrollbar',
+  },
+  slidesPerView: 1,
+  spaceBetween: 10,
+  // using "ratio" endpoints
+});
